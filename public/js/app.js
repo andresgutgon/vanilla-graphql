@@ -25,12 +25,12 @@ function displayIngredients (result) {
     var element = document.createElement('p')
     element.innerHTML = 'Could not retrieve ingredients.'
     console.error("GraphQL Errors", result.errors)
-  } else if (result.data.menuItems) {
+  } else if (result.data.ingredients) {
     var element = document.createElement('ul');
     result.data.ingredients.forEach(function(ingredient) {
-      var $ingredient = document.createElement('li');
-      $ingredient.innerHTML = ingredient.name;
-      element.appendChild($ingredient);
+      var ingredientElement = document.createElement('li');
+      ingredientElement.innerHTML = ingredient.name;
+      element.appendChild(ingredientElement);
     })
   }
   document.body.appendChild(element);
