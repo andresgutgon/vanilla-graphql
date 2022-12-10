@@ -7,7 +7,7 @@
     "dev": "node ./"
   },
   "devDependencies": {
-    "express": "4.17.1",
+    "express": "4.17.3",
     "eslint": "5.16.0"
   }
 }
